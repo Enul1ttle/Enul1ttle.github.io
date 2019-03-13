@@ -79,13 +79,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Enul1ttle">
-<meta property="og:url" content="https://enul1ttle.github.io/index.html">
+<meta name="description" content="环境配置 控制机：192.168.79.128 win7 x64目标机：192.168.79.147 win2008 R2 x64  0x01 Cobalt Strike运行服务：./TeamServer.exe 192.168.79.128 password新建监听：Cobalt Strike-&amp;gt;Listeners添加C# payload：Attacks-&amp;gt;Packages-&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MSBuild执行Cobalt Strike payload">
+<meta property="og:url" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/index.html">
 <meta property="og:site_name" content="Enul1ttle">
+<meta property="og:description" content="环境配置 控制机：192.168.79.128 win7 x64目标机：192.168.79.147 win2008 R2 x64  0x01 Cobalt Strike运行服务：./TeamServer.exe 192.168.79.128 password新建监听：Cobalt Strike-&amp;gt;Listeners添加C# payload：Attacks-&amp;gt;Packages-&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/1.png">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/2.png">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/3.png">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/4.png">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/5.png">
+<meta property="og:updated_time" content="2019-03-13T09:20:15.833Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Enul1ttle">
+<meta name="twitter:title" content="MSBuild执行Cobalt Strike payload">
+<meta name="twitter:description" content="环境配置 控制机：192.168.79.128 win7 x64目标机：192.168.79.147 win2008 R2 x64  0x01 Cobalt Strike运行服务：./TeamServer.exe 192.168.79.128 password新建监听：Cobalt Strike-&amp;gt;Listeners添加C# payload：Attacks-&amp;gt;Packages-&amp;gt;">
+<meta name="twitter:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/1.png">
 
 
 
@@ -115,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://enul1ttle.github.io/">
+  <link rel="canonical" href="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/">
 
 
 
 
 
-  <title>Enul1ttle</title>
+  <title>MSBuild执行Cobalt Strike payload | Enul1ttle</title>
   
 
 
@@ -140,8 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +223,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +255,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/13/MSBuild执行Cobalt-Strike-payload/" itemprop="url">MSBuild执行Cobalt Strike payload</a></h1>
+          <h1 class="post-title" itemprop="name headline">MSBuild执行Cobalt Strike payload</h1>
         
 
         <div class="post-meta">
@@ -280,6 +287,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -298,9 +310,7 @@
       
 
       
-        
-          
-            <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><blockquote>
+        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><blockquote>
 <p>控制机：192.168.79.128 win7 x64<br>目标机：192.168.79.147 win2008 R2 x64</p>
 </blockquote>
 <h2 id="0x01-Cobalt-Strike"><a href="#0x01-Cobalt-Strike" class="headerlink" title="0x01 Cobalt Strike"></a>0x01 Cobalt Strike</h2><p>运行服务：<code>./TeamServer.exe 192.168.79.128 password</code><br>新建监听：<code>Cobalt Strike-&gt;Listeners</code><br>添加C# payload：<code>Attacks-&gt;Packages-&gt;Payload Generator</code><br><img src="1.png" alt></p>
@@ -379,8 +389,6 @@
 <p><img src="4.png" alt></p>
 <h2 id="0x04-结果"><a href="#0x04-结果" class="headerlink" title="0x04 结果"></a>0x04 结果</h2><p><img src="5.png" alt><br><strong>原文</strong>：<a href="https://blog.conscioushacker.io/index.php/2017/11/17/application-whitelisting-bypass-msbuild-exe/" target="_blank" rel="noopener">https://blog.conscioushacker.io/index.php/2017/11/17/application-whitelisting-bypass-msbuild-exe/</a><br><strong>payload.xml</strong>:<a href="https://gist.github.com/ConsciousHacker/5fce0343f29085cd9fba466974e43f17" target="_blank" rel="noopener">https://gist.github.com/ConsciousHacker/5fce0343f29085cd9fba466974e43f17</a></p>
 
-          
-        
       
     </div>
     
@@ -397,12 +405,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -412,10 +420,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -423,6 +432,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -443,8 +456,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -486,6 +508,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Cobalt-Strike"><span class="nav-number">2.</span> <span class="nav-text">0x01 Cobalt Strike</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-构造payload-xml"><span class="nav-number">3.</span> <span class="nav-text">0x02 构造payload.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-使用方法"><span class="nav-number">4.</span> <span class="nav-text">0x03 使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-结果"><span class="nav-number">5.</span> <span class="nav-text">0x04 结果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -639,6 +677,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
