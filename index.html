@@ -350,6 +350,7 @@
 <li>漏洞扫描：Nilto openvas Arachni w3af dirsearch XSStrike CMSeek sqliv</li>
 <li>漏洞利用 :metasploit sqlmap</li>
 <li>模糊测试：WAFNinja Wfuzz</li>
+<li>暴力破解：hydra</li>
 <li>后渗透工具：nc frp cobaltstrike</li>
 </ul>
 <h2 id="0x02-工具的介绍与简单使用"><a href="#0x02-工具的介绍与简单使用" class="headerlink" title="0x02 工具的介绍与简单使用"></a>0x02 工具的介绍与简单使用</h2><h3 id="whois"><a href="#whois" class="headerlink" title="whois"></a>whois</h3><ul>
@@ -432,11 +433,14 @@
 <blockquote>
 <p><code>wfuzz -c -z range,1-20 https://tongji.baidu.com/web/help/article?id=FUZZ</code></p>
 </blockquote>
-<p><img src="wfuzz.png" alt></p>
-<p>fuzz字典</p>
+<p><img src="wfuzz.png" alt><br>fuzz字典</p>
 <ul>
 <li><a href="https://github.com/Stardustsky/SaiDict" target="_blank" rel="noopener">https://github.com/Stardustsky/SaiDict</a></li>
 <li><a href="https://github.com/fuzzdb-project/fuzzdb" target="_blank" rel="noopener">https://github.com/fuzzdb-project/fuzzdb</a></li>
+</ul>
+<h3 id="hydra"><a href="#hydra" class="headerlink" title="hydra"></a>hydra</h3><p>爆破神器</p>
+<ul>
+<li><code>hydra -l user -P passlist.txt ftp://192.168.0.1</code></li>
 </ul>
 <h3 id="frp"><a href="#frp" class="headerlink" title="frp"></a>frp</h3><p>服务端frps.ini<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server_port = 7000</span><br><span class="line">auth_token = 001</span><br></pre></td></tr></table></figure></p>
 <blockquote>
